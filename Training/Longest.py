@@ -8,13 +8,13 @@
 # a = "xyaabbbccccdefww"
 # b = "xxxxyyyyabklmopq"
 
-def IndexOFF(a, b):
+def Longest(a, b):
     s = "".join(sorted(set(a + b)))
     print(s)
 
 first = "xyaabbbccccdefww"
 second = "xxxxyyyyabklmopq"
-IndexOFF(first,second)
+Longest(first,second)
 
 
 #######
