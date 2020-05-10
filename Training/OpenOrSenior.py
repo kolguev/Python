@@ -17,4 +17,4 @@ def openOrSenior(data):
             NewData.append(Item)
     return NewData
 
-print(openOrSenior("data"))
+print(openOrSenior(data))
