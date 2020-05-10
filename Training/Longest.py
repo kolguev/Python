@@ -9,21 +9,16 @@
 # b = "xxxxyyyyabklmopq"
 
 def IndexOFF(a, b):
-    NeedString = a + b
-    s = "".join(sorted(a + b))
+    s = "".join(sorted(set(a + b)))
     print(s)
-
-
 
 first = "xyaabbbccccdefww"
 second = "xxxxyyyyabklmopq"
-# first = "x"
-# second = "xyyx"
 IndexOFF(first,second)
 
 
 #######
-def longest(s1, s2):
+""" def longest(s1, s2):
     # your code
     
     # Defining the Alphabet
@@ -43,4 +38,4 @@ def longest(s1, s2):
         y = y + x
         
     # returning the final output    
-    return y
+    return y """
