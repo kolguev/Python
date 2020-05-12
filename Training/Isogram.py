@@ -1,3 +1,4 @@
-string = "Dermatoglyphics"
+string = "ara"
 s = set(string)
-print(s)
+if s == string:
+    print(True)
