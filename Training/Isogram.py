@@ -1,4 +1,4 @@
 string = "ara"
 s = set(string)
-if s == string:
+if s == list(string):
     print(True)
