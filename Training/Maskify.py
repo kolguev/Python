@@ -1,6 +1,4 @@
-Strings = "6767879988787867576"
-
-def maskifi(String):
+def maskify1(String):
     if len(String) > 4:
         String1 = String[:-4]
         String2 = String[-4:]
@@ -10,4 +8,11 @@ def maskifi(String):
     else:
         print(String)
 
-maskifi(Strings)
+
+
+Strings = "6767"
+maskify1(Strings)
+
+print(Strings[:-4].replace(Strings[:-4], "#" * len(Strings[:-4])) + Strings[-4:])
+
+print('#' * (len(Strings) - 4) + Strings[-4:])
