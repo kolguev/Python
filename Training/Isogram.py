@@ -1,4 +1,4 @@
-string = "Dismental"
+string = "abcdefg"
 
 def isogram(string):
     for i in string:
