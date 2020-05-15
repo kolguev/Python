@@ -9,7 +9,7 @@ def find_even_index(arr):
 
 
 
-ListOfInteger = [1,2,3,4,3,2,1]
+ListOfInteger = list(range(1,100)) #[10,-80,10,10,15,35,20]
 """ Sum0 = sum(ListOfInteger[0:6]) # list
 Sum1 = sum(ListOfInteger[(6 + 1):len(ListOfInteger)]) # list
 print(Sum1) """
