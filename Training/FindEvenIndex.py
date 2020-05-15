@@ -1,7 +1,7 @@
 def find_even_index(arr):
     Number = 0
     for i in arr:
-        if sum(arr[0:Number]) == sum(arr[(Number + 1):len(arr)]):
+        if sum(arr[0:Number]) == sum(arr[(Number + 1):]):
             return Number
         Number += 1
     return -1
