@@ -1,4 +1,4 @@
-string = "Dissmental"
+string = "abcdefg"
 
 def isogram(string):
     for i in string:
@@ -9,4 +9,6 @@ def isogram(string):
 
 print(isogram(string))
 
-
+def isogram1(string):
+    return len(string) == len(set(string))
+print(isogram1(string))
