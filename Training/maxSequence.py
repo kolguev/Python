@@ -19,6 +19,9 @@ def maxSequence(arr):
 
 print(maxSequence(l))
 
+# def maxSequence(arr):
+#     return max([sum(arr[i:j]) for i in range(len(arr)+1) for j in range(len(arr)+1)])
+
 # def MaxSequence(arr):
 #     max,curr=0,0
 #     for x in arr:
