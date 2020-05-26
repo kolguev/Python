@@ -9,14 +9,7 @@ def maxSequence(arr):
     arr2 = []
     if arr:
         for ind in range(0, len(arr)):
-            arr2.append(
-                max(
-                    [
-                        [sum(arr[ind:x]), arr[ind:x]]
-                        for x in range(ind + 1, len(arr) + 1)
-                    ]
-                )
-            )
+            arr2.append(max([[sum(arr[ind:x]), arr[ind:x]] for x in range(ind + 1, len(arr) + 1)]))
         if max(arr2)[0] > 0:
             return max(arr2)[0]
         else:
@@ -24,5 +17,12 @@ def maxSequence(arr):
     else:
         return 0
 
-
 print(maxSequence(l))
+
+def MaxSequence(arr):
+    max,curr=0,0
+    for x in arr:
+        curr+=x
+        if curr<0:curr=0
+        if curr>max:max=curr
+    return max
