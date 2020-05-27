@@ -11,7 +11,7 @@ l2 = [ ':)', ';)', ':~)', ':-)', ';~)', ';-)', ':D', ';D', ':~D', ':-)D', ';~D',
 #         print(x)
 
 for x in l:
-    result = re.findall(r'[;|:][-|~][D|)]', x)
+    result = re.findall(r'[;|:][-|~]?[)|D]$', x)
     if result:
        print(result)
 
