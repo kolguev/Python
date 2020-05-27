@@ -2,17 +2,18 @@
 # should be 6: [4, -1, 2, 1]
 
 import re
-# :) :D ;-D :~)
+
 l =  [';]', ':[', ';*', ':$', ';-D']
 l2 = [ ':)', ';)', ':~)', ':-)', ';~)', ';-)', ':D', ';D', ':~D', ':-)D', ';~D', ';-D' ]
 
-for x in range(len(l)):
-    if l[x].find(';-D') == 0:
-        print(x)
+# for x in range(len(l)):
+#     if l[x].find(';-D') == 0:
+#         print(x)
 
-
-result = re.findall(r'.', 'AV is largest Analytics community of India')
-print result
+for x in l:
+    result = re.findall(r'[;|:][-|~][D|)]', x)
+    if result:
+       print(result)
 
 #print(",".join(l))
 
