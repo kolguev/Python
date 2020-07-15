@@ -19,7 +19,7 @@ HeadersPets = {"accept": "aplication/json", "auth-key": AuthKey}
 # print(HeadersPets)
 
 GetMyPets = requests.get(
-    "http://petfriends1.herokuapp.com/api/pets", headers=HeadersPets
+    "http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets
 )
 Pets = GetMyPets.text
 print(Pets[0:200])
