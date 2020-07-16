@@ -45,15 +45,15 @@ print("""</body>
 #    "password": "your-pass",
 #}
 
-Headers = {p1k: p1v, p2k: p2v, p3k: p3v}
+HeadersKey = {p1k: p1v, p2k: p2v, p3k: p3v} # Параметры для заголовка на получение ключа
 
-GetKey = requests.get("http://petfriends1.herokuapp.com/api/key", headers=Headers)
+GetKey = requests.get("http://petfriends1.herokuapp.com/api/key", headers=HeadersKey)
 Key = GetKey.text
 AuthKey = Key[(Key.find(":") + 2) : (len(Key) - 3)]
 print(Key)
 #print(AuthKey)
 
-HeadersPets = {p1k: p1v, "auth-key": AuthKey}
+HeadersPets = {p1k: p1v, "auth-key": AuthKey} # Параметры для заголовка на получение данных по животным
 
 GetMyPets = requests.get(
     "http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets
