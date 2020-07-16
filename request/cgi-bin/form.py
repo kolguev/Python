@@ -41,8 +41,8 @@ print("""</body>
 
 #HeadersKey = {
 #    "accept": "aplication/json",
-#    "email": "alexseym@inbox.ru",
-#    "password": "qwe123!",
+#    "email": "your-email",
+#    "password": "your-pass",
 #}
 
 Headers = {p1k: p1v, p2k: p2v, p3k: p3v}
