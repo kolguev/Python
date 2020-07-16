@@ -47,7 +47,7 @@ print("""</body>
 
 HeadersKey = {p1k: p1v, p2k: p2v, p3k: p3v} # Параметры для заголовка на получение ключа
 
-GetKey = requests.get("http://petfriends1.herokuapp.com/api/key", headers=HeadersKey)
+GetKey = requests.get(url, headers=HeadersKey)
 Key = GetKey.text
 AuthKey = Key[(Key.find(":") + 2) : (len(Key) - 3)]
 print(Key)
