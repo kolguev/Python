@@ -38,7 +38,7 @@ print("""</body>
 
 
 ######################################
-
+# Дальше пример ключей и значений
 #HeadersKey = {
 #    "accept": "aplication/json",
 #    "email": "your-email",
