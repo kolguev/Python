@@ -60,4 +60,3 @@ GetMyPets = requests.get(
 )
 MyPets = GetMyPets.text
 print(MyPets)
-
