@@ -10,4 +10,12 @@ print(Key["key"])
 HeadersPets = {"accept": "aplication/json", "auth-key": Key["key"]} # Параметры для заголовка на получение данных по животным
 
 GetMyPets = requests.get("http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets).json()
-print(GetMyPets["pets"])
+petPhoto = GetMyPets["pets"][1]["pet_photo"]
+#print(len(petPhoto))
+
+#print(petPhoto[4:7])
+NewpetPhoto = petPhoto[0:101]
+print(NewpetPhoto)
+
+
+
