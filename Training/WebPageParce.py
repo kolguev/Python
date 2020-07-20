@@ -16,13 +16,15 @@ p3k = form.getfirst("param3-key", "not defined")
 p3v = form.getfirst("param3-value", "not defined")
 
 print("Content-type: text/html\n")
-print("""<!DOCTYPE HTML>
+print(
+    """<!DOCTYPE HTML>
         <html>
         <head>
             <meta charset="utf-8">
             <title>Обработка данных форм</title>
         </head>
-        <body>""")
+        <body>"""
+)
 
 print("<h1>Обработка данных форм!</h1>")
 print("<p>uri: {}</p>".format(uri))
@@ -34,8 +36,10 @@ print("<p>param3-key: {}</p>".format(p3k))
 print("<p>param3-value: {}</p>".format(p3v))
 
 
-print("""</body>
-        </html>""")
+print(
+    """</body>
+        </html>"""
+)
 
 
 ######################################
@@ -60,5 +64,15 @@ GetMyPets = requests.get(
     "http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets
 )
 Pets = GetMyPets.text
-print(Pets[0:200])
+string2 = ""
+width = 100
+
+string2 = string2 + Pets[:width] + "\n"
+string2 = string2 + Pets[width : (width + 100)] + "\n"
+string2 = string2 + Pets[(width + 100) :]
+
+print(string2)
+# print(len(string2))
+
+# print(Pets[0:200])
 
