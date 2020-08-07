@@ -28,7 +28,16 @@ Key = requests.get("http://petfriends1.herokuapp.com/api/key", headers=HeadersKe
 
 HeadersPets = {p1k: p1v, "auth-key": Key["key"]} # Параметры для заголовка на получение данных по животным
 
-GetMyPets = requests.get("http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets).json()
+GetMyPets = requests.get("http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets).text
+
+string2 = ""
+width = 100
+
+string2 = string2 + GetMyPets[:width] + "\n"
+string2 = string2 + GetMyPets[width : (width + 100)] + "\n"
+string2 = string2 + GetMyPets[(width + 100) :400]
+
+#print(string2)
 
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML>
@@ -50,7 +59,7 @@ print("<p>p2k: {}</p>".format(p2k))
 print("<p>p2v: {}</p>".format(p2v))
 print("<p>p3k: {}</p>".format(p3k))
 print("<p>p3v: {}</p>".format(p3v))
-print("<p>MyPets: {}</p>".format(GetMyPets))
+print("<p>MyPets: {}</p>".format(string2))
 print("""</div>
             </body>
                 </html>""")
