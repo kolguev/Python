@@ -1,4 +1,4 @@
-from PIL import Image
+# from PIL import Image
 
 # print(sys.version)
 # print(sys.executable)
@@ -14,5 +14,6 @@ from PIL import Image
 # print(letter_counts)
 
 
-img = Image.open("1.png")
-img.format
+# img = Image.open("1.png")
+# img.format
+help(print)
