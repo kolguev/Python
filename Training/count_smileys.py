@@ -3,14 +3,16 @@
 
 import re
 
-l =  []
+l = [":)", ":-)", ";-(", "-)"]
+
 
 def count_smileys(arr):
     c = []
     for x in arr:
-        result = re.findall(r'[;|:][-|~]?[)|D]$', x)
+        result = re.findall(r"[;|:][-|~]?[)|D]$", x)
         if result:
             c.append(result)
     return len(c)
+
 
 count_smileys(l)
