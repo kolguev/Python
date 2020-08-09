@@ -32,12 +32,13 @@ GetMyPets = requests.get("http://petfriends1.herokuapp.com/api/pets?filter=my_pe
 
 string2 = ""
 width = 100
+L = len(GetMyPets) // 100
+L2 = len(GetMyPets)
+F = 0
 
-string2 = string2 + GetMyPets[:width] + "\n"
-string2 = string2 + GetMyPets[width : (width + 100)] + "\n"
-string2 = string2 + GetMyPets[(width + 100) :400]
-
-#print(string2)
+for i in range(1, L + 2):
+    string2 = string2 + GetMyPets[F : i * 100] + "\n"
+    F = i * 100
 
 print("Content-type: text/html\n")
 print("""<!DOCTYPE HTML>
@@ -52,6 +53,7 @@ print("""<!DOCTYPE HTML>
         """)
 
 print("<h1>Form Data!</h1>")
+print("<p>L: {}</p>".format(L2))
 print("<p>url: {}</p>".format(url))
 print("<p>p1k: {}</p>".format(p1k))
 print("<p>p1v: {}</p>".format(p1v))
