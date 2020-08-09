@@ -16,4 +16,4 @@
 
 # img = Image.open("1.png")
 # img.format
-help(print)
+help(str)
