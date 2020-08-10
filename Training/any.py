@@ -16,4 +16,17 @@
 
 # img = Image.open("1.png")
 # img.format
-help(str)
+vklad = 100000
+month = 12
+percent = 0.033
+
+"""for i in range(0, month):
+    MonthSum = vklad * (percent / month)
+    vklad = vklad + MonthSum
+print(vklad)"""
+
+i = 0
+while i < month:
+    vklad += vklad * (percent / month)
+    i += 1
+print(vklad)
