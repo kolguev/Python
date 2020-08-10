@@ -1,6 +1,8 @@
+#!/usr/local/bin/python3
 import requests
-#from bs4 import BeautifulSoup
-#import json
+
+# from bs4 import BeautifulSoup
+# import json
 import cgi
 
 form = cgi.FieldStorage()
@@ -17,18 +19,25 @@ p3v = form.getfirst("param3-value", "not defined")
 
 ######################################
 # Дальше пример ключей и значений
-#HeadersKey = {
+# HeadersKey = {
 #    "accept": "aplication/json",
 #    "email": "your-email",
 #    "password": "your-pass",
-#}
+# }
 
-HeadersKey = {p1k: p1v, p2k: p2v, p3k: p3v} # Параметры для получения ключа
-Key = requests.get("http://petfriends1.herokuapp.com/api/key", headers=HeadersKey).json()
+HeadersKey = {p1k: p1v, p2k: p2v, p3k: p3v}  # Параметры для получения ключа
+Key = requests.get(
+    "http://petfriends1.herokuapp.com/api/key", headers=HeadersKey
+).json()
 
-HeadersPets = {p1k: p1v, "auth-key": Key["key"]} # Параметры для заголовка на получение данных по животным
+HeadersPets = {
+    p1k: p1v,
+    "auth-key": Key["key"],
+}  # Параметры для заголовка на получение данных по животным
 
-GetMyPets = requests.get("http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets).text
+GetMyPets = requests.get(
+    "http://petfriends1.herokuapp.com/api/pets?filter=my_pets", headers=HeadersPets
+).text
 
 string2 = ""
 width = 100
@@ -41,7 +50,8 @@ for i in range(1, L + 2):
     F = i * 100
 
 print("Content-type: text/html\n")
-print("""<!DOCTYPE HTML>
+print(
+    """<!DOCTYPE HTML>
         <html>
         <head>
             <meta charset="utf-8">
@@ -50,7 +60,8 @@ print("""<!DOCTYPE HTML>
         </head>
         <body>
         <div class="page-wrapper">
-        """)
+        """
+)
 
 print("<h1>Form Data!</h1>")
 print("<p>L: {}</p>".format(L2))
@@ -62,6 +73,9 @@ print("<p>p2v: {}</p>".format(p2v))
 print("<p>p3k: {}</p>".format(p3k))
 print("<p>p3v: {}</p>".format(p3v))
 print("<p>MyPets: {}</p>".format(string2))
-print("""</div>
+print(
+    """</div>
             </body>
-                </html>""")
+                </html>"""
+)
+
