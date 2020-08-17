@@ -24,9 +24,16 @@ Praesent tellus mauris, viverra vitae malesuada at, ornare id nisi. Vestibulum."
 text = text.replace(" ", "").lower()
 most_common = None
 qty_most_common = 0
+d = {}
+l = []
 
-for item in text:
+for item in set(text):
     qty = text.count(item)
     print(item)
     print(qty)
+    l.append(qty)
+    #d.update(item, qty)
+print(sorted(l))
+l = sorted(l)
+print(l[len(l) - 2 : -1])
 
