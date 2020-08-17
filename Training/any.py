@@ -14,19 +14,19 @@
 # print(letter_counts)
 
 
-# img = Image.open("1.png")
-# img.format
-vklad = 100000
-month = 12
-percent = 0.033
+text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget tempus est. Phasellus sit amet 
+tristique neque. Sed luctus mi ut nisi suscipit placerat. Nunc nec diam dapibus, fermentum risus ut, ultrices orci. 
+Integer non magna molestie nibh dapibus tincidunt. Quisque quis est quam. Sed dictum mi sit amet magna pretium blandit. 
+Nulla tortor turpis, maximus vitae lobortis quis, varius sed metus. Nullam at congue metus. Pellentesque scelerisque, dui 
+et luctus semper, odio diam scelerisque justo, nec tempor ex metus et enim. Praesent rhoncus nisl eget risus elementum ornare. 
+Praesent tellus mauris, viverra vitae malesuada at, ornare id nisi. Vestibulum."""
 
-"""for i in range(0, month):
-    MonthSum = vklad * (percent / month)
-    vklad = vklad + MonthSum
-print(vklad)"""
+text = text.replace(" ", "").lower()
+most_common = None
+qty_most_common = 0
 
-i = 0
-while i < month:
-    vklad += vklad * (percent / month)
-    i += 1
-print(vklad)
+for item in text:
+    qty = text.count(item)
+    print(item)
+    print(qty)
+
