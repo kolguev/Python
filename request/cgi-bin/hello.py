@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
+from jinja2 import Template
 
-print("Content-type: text/html")
-print()
-print("<h1>Hello world!</h1>")
+template = Template('Hello {{ name }}!')
+print(template.render(name='John Doe'))
