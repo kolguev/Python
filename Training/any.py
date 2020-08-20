@@ -19,19 +19,21 @@ tristique neque. Sed luctus mi ut nisi suscipit placerat. Nunc nec diam dapibus,
 Integer non magna molestie nibh dapibus tincidunt. Quisque quis est quam. Sed dictum mi sit amet magna pretium blandit. 
 Nulla tortor turpis, maximus vitae lobortis quis, varius sed metus. Nullam at congue metus. Pellentesque scelerisque, dui 
 et luctus semper, odio diam scelerisque justo, nec tempor ex metus et enim. Praesent rhoncus nisl eget risus elementum ornare. 
-Praesent tellus mauris, viverra vitae malesuada at, ornare id nisi. Vestibulumi."""
+Praesent tellus mauris, viverra vitae malesuada at, ornare id nisi. Vestibulum."""
 
 text = text.replace(" ", "").lower()
-most_common = None
-qty_most_common = 0
-d = {}
+lt = []
 l = []
 
 for item in set(text):
     qty = text.count(item)
     l.append(qty)
-    d.update({qty: item})
+    t = (qty, item)
+    lt.append(t)
 
 l = sorted(l)
-needLetter = (l[len(l) - 2 : -1])
-print(d[needLetter[0]])
+needLetter = l[len(l) - 2 : -1]
+
+for item in lt:
+    if item[0] == needLetter[0]:
+        print(item[1])
