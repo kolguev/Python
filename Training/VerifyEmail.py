@@ -8,6 +8,6 @@ for i in mail:
     if result:
         dict_email[i] = True  # print({result[0]: "True"})
     else:
-        print("Wrong email")
+        dict_email[i] = False  # print("Wrong email")
 
 print(dict_email)
