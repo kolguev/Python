@@ -38,7 +38,7 @@ for item in lt:
     if item[0] == needLetter[0]:
         print(item[1])'''
 
-list_email = input("Enter emails: ").split(", ")
+"""list_email = input("Enter emails: ").split(", ")
 dict_email = {}
 
 for i in list_email:
@@ -54,4 +54,15 @@ for i in list_email:
 
     dict_email[i] = result
 
-print(dict_email)
+print(dict_email)"""
+
+
+"""l = [4]
+
+for j in range(10):
+    print([i for i in l])
+    l.append(4)"""
+
+
+for j in range(1, 11):
+    print([int(i) for i in (lambda x: x * j)("4")])
