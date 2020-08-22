@@ -1,14 +1,20 @@
-import re
+import re  # Импорт модуля для работы с регулярными выражениями
 
-mail = input("Input email: ").split(", ")
+mail = input("Введите email'ы через запятую с пробелом : ").split(
+    ", "
+)  # Предлагаем пользователю ввести email адреса разделив из запятой с пробелом. Метод split создает список с адресами
 
-dict_email = {}
+dict_email = {}  # Создаем пустой словарь для записи результата
 
-for i in mail:
-    dict_email[i] = False
+for i in mail:  # Выполняем цикл по каждому элементу с списке email адреса
+    dict_email[i] = False  # Записываем email в словарь с значением false
 
     result = re.findall(r"(^\w\w+[@]\w\w+[\.]?\w\w+[\.][a-z][a-z]+$)", i)
-    if result:
+    # Сверяем email адрес с регулярным выражением в скобках, если совпадает записываем в переменную result
+
+    if (
+        result
+    ):  # Если переменная result не пустая, то перезаписываем email адрес в словаре со значением true
         dict_email[i] = True
 
-print(dict_email)
+print(dict_email)  # Выводим на экран получившийся словарь
