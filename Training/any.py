@@ -1,3 +1,5 @@
+import math
+
 # from PIL import Image
 
 # print(sys.version)
@@ -64,5 +66,25 @@ for j in range(10):
     l.append(4)"""
 
 
-for j in range(1, 11):
-    print([int(i) for i in (lambda x: x * j)("4")])
+"""for j in range(1, 11):
+    print([int(i) for i in (lambda x: x * j)("4")])"""
+
+
+number = int(input("Введите число: "))
+
+a = 1
+b = 1
+l1 = []
+l2 = []
+
+for i in range(number):
+    l1.append(a)
+    a += 1
+
+for j in l1:
+    b *= j
+    if l1.index(j) == 0 or l1.index(j) % 2 == 0:
+        l2.append(b)
+    s = sum(l2)
+
+print(s)
