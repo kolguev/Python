@@ -91,7 +91,7 @@ s = sum(l2)
 print(s)"""
 
 
-def factorial(n):
+"""def factorial(n):
     if n == 0:
         return 1
     return factorial(n - 1) * n
@@ -110,5 +110,11 @@ for j in row:
 
 print(
     f"Сумма всех цифр фаториала, стоящих на нечетных позициях длиной {number}, равна {Sum}"
-)
+)"""
+
+a = [[10, 20, 30, 40, 50], [60, 70, 80, 90, 100]]
+row = []
+
+for i in range(len(a)):
+    print(a[i])
 
