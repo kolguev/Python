@@ -70,7 +70,7 @@ for j in range(10):
     print([int(i) for i in (lambda x: x * j)("4")])"""
 
 
-number = int(input("Введите число: "))
+"""number = int(input("Введите число: "))
 
 a = 1
 b = 1
@@ -88,4 +88,27 @@ for j in l1:
 
 s = sum(l2)
 
-print(s)
+print(s)"""
+
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return factorial(n - 1) * n
+
+
+number = int(input("Введите чсло: "))
+row = []
+
+for i in range(number + 1):
+    if i % 2 != 0:
+        row.append(factorial(i))
+
+Sum = 0
+for j in row:
+    Sum += j
+
+print(
+    f"Сумма всех цифр фаториала, стоящих на нечетных позициях длиной {number}, равна {Sum}"
+)
+
