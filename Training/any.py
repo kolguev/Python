@@ -83,8 +83,9 @@ for i in range(number):
 
 for j in l1:
     b *= j
-    if l1.index(j) == 0 or l1.index(j) % 2 == 0:
+    if l1.index(j) % 2 == 0:
         l2.append(b)
-    s = sum(l2)
+
+s = sum(l2)
 
 print(s)
