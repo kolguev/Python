@@ -118,3 +118,21 @@ row = []
 for i in range(len(a)):
     print(a[i])"""
 
+'''a = [['0', '1', '2', '3'], ['4', '5', '6', '7'], ['8', '9', '10', '11'], '2222']
+
+def look_for_key(box):
+    for item in box:
+        if len(item) > 1:
+            look_for_key(item)
+        else:
+            print(item, end=' ')
+
+look_for_key(a)'''
+
+b = 5
+def factorial(n):
+    if n == 0:
+        return 1
+    return factorial(n - 1) * n
+
+print(factorial(b))
