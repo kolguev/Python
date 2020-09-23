@@ -129,10 +129,60 @@ def look_for_key(box):
 
 look_for_key(a)'''
 
-b = 5
-def factorial(n):
-    if n == 0:
-        return 1
-    return factorial(n - 1) * n
+'''l = [1,3,5,7,9]
 
-print(factorial(b))
+def sumList(x):
+    if x==[]:
+        return 0
+    else:
+        return x[0]+sumList(x[1:])
+
+print(sumList(l))'''
+
+# Сортировки
+# Пузырьковая bubble
+'''def bubble_sort(A):
+    for i in range(N-1):
+        for j in range(N-i-1):
+            if A[j] > A[j+1]:
+                A[j], A[j+1] = A[j+1], A[j]
+    return A
+
+A = [2, 7, 3, 8, 78, 34, 67, 33, 8]
+N = len(A)
+B = bubble_sort(A)
+print(B)
+print(B[3] + B[8])
+
+def bubbleSort(l):
+    i = 0
+    while i<len(l):
+        j = 0
+        while j<len(l)-1:
+            if l[j+1] < l[j]:
+                l[j], l[j+1] = l[j+1], l[j]
+            j += 1
+        i += 1
+    return l
+a = [93, 12, 67, 77, 12, 81, 88, 58, 72, 55]
+b = []
+for i in range(len(a)):
+    b.append(i)
+bubbleSort(a)
+print(", ".join(map(str, a)))'''
+
+# Вставками insertion
+def insertion(A):
+    for i in range(1, len(A)):
+        b = A[i]
+        j = i - 1
+        while (j >= 0) and (b < A[j]):
+            A[j+1] = A[j]
+            j -= 1
+        A[j+1] = b
+    return A
+
+arr = [5, 7, 1, 8, 178, 34, 79, 33, 15]
+insertion(arr)
+arr.reverse()
+print(", ".join(map(str, arr)))
