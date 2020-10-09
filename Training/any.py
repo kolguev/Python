@@ -118,7 +118,7 @@ row = []
 for i in range(len(a)):
     print(a[i])"""
 
-'''a = [['0', '1', '2', '3'], ['4', '5', '6', '7'], ['8', '9', '10', '11'], '2222']
+"""a = [['0', '1', '2', '3'], ['4', '5', '6', '7'], ['8', '9', '10', '11'], '2222']
 
 def look_for_key(box):
     for item in box:
@@ -127,9 +127,9 @@ def look_for_key(box):
         else:
             print(item, end=' ')
 
-look_for_key(a)'''
+look_for_key(a)"""
 
-'''l = [1,3,5,7,9]
+"""l = [1,3,5,7,9]
 
 def sumList(x):
     if x==[]:
@@ -137,11 +137,11 @@ def sumList(x):
     else:
         return x[0]+sumList(x[1:])
 
-print(sumList(l))'''
+print(sumList(l))"""
 
 # Сортировки
 # Пузырьковая bubble
-'''def bubble_sort(A):
+"""def bubble_sort(A):
     for i in range(N-1):
         for j in range(N-i-1):
             if A[j] > A[j+1]:
@@ -169,18 +169,19 @@ b = []
 for i in range(len(a)):
     b.append(i)
 bubbleSort(a)
-print(", ".join(map(str, a)))'''
+print(", ".join(map(str, a)))"""
 
-# Вставками insertion
+# Сортировка вставками insertion
 def insertion(A):
     for i in range(1, len(A)):
         b = A[i]
         j = i - 1
         while (j >= 0) and (b < A[j]):
-            A[j+1] = A[j]
+            A[j + 1] = A[j]
             j -= 1
-        A[j+1] = b
+        A[j + 1] = b
     return A
+
 
 arr = [5, 7, 1, 8, 178, 34, 79, 33, 15]
 insertion(arr)
