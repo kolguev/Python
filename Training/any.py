@@ -171,8 +171,13 @@ for i in range(len(a)):
 bubbleSort(a)
 print(", ".join(map(str, a)))"""
 
+<<<<<<< Updated upstream
 # Сортировка вставками insertion
 def insertion(A):
+=======
+# Вставками insertion
+'''def insertion(A):
+>>>>>>> Stashed changes
     for i in range(1, len(A)):
         b = A[i]
         j = i - 1
@@ -186,4 +191,19 @@ def insertion(A):
 arr = [5, 7, 1, 8, 178, 34, 79, 33, 15]
 insertion(arr)
 arr.reverse()
+<<<<<<< Updated upstream
 print(", ".join(map(str, arr)))
+=======
+print(", ".join(map(str, arr)))'''
+
+list_to_sort = [25, 47, 13, 77, 57, 12]
+list_to_sort.sort(key = lambda x: str(x)[0])
+list_to_sort = [str(item) for item in list_to_sort]
+print(", ".join(list_to_sort))
+
+answer = ",fgfg,".replace(",", ".")
+print(answer)
+
+a = 5.8 + 4.9
+print(a)
+>>>>>>> Stashed changes
