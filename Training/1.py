@@ -1,11 +1,6 @@
-string = "топот рокот стук колес роза ветер 141 4434 тот"
+def print_arg(*items):
+    print(items)
 
-l = string.split()
-print(l)
-l2 = []
 
-for i in l:
-    if i == i[::-1]:
-        l2.append(i)
+print_arg(1, 2, 3, "hello")
 
-print(l2)
