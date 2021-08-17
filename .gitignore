@@ -355,3 +355,9 @@ MigrationBackup/
 #
 .DS_Store
 .vscode
+
+# My files
+Tasks.xlsx
+trello.py
+
+
