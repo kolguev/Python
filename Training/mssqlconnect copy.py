@@ -14,7 +14,12 @@ cursor = conn.cursor()
 df = pd.read_sql_query("SELECT MachineName,CounterName,InstanceName,CounterDateTime,CounterValue FROM hardware.dbo.View_hardware WHERE MachineName = '\\\\dbsrv' AND CounterName ='Средняя длина очереди диска' AND InstanceName = '2 F:'", conn)
 #df = pd.read_sql_query("SELECT MachineName,CounterName,InstanceName,CounterDateTime,CounterValue FROM hardware.dbo.View_hardware WHERE MachineName = '\\\\BARIONSRVFILES2' AND CounterName ='% активности диска' AND InstanceName = '1 D:'", conn)
 
-print(df)
-
-df.plot(x="CounterDateTime", y=["CounterValue",])
-plt.show()
+print(df['CounterDateTime'][1:20])
+s = df['CounterDateTime'].astype('string')[0][2:19]
+#s1 = s.astype('string')
+print(s)
+#df['CounterDateTime'] = s
+#print(df)
+#print(s)
+#df.plot(x="CounterDateTime", y=["CounterValue",])
+#plt.show()
